@@ -14,8 +14,10 @@ Abc bLOG is a simple CRUD (Create, Read, Update, Delete) blog web application bu
 
 
 ## Technologies Used
-* Java Spring Boot
+* Spring Boot 3.0.2
 * Sprind Data JPA
+* Hibernate
 * PosgresSQL
-* Spring Security
+* Spring Security 6
+
 
