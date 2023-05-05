@@ -1,25 +1,26 @@
 package com.abc.blog.service;
 
+import com.abc.blog.config.UserHelper;
 import com.abc.blog.exception.GlobalRequestException;
 import com.abc.blog.model.BlogPost;
 import com.abc.blog.model.ResponseDataFormat;
 import com.abc.blog.repository.BlogPostRepository;
-import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import com.abc.blog.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
 public class BlogServiceImpl implements BlogService{
 
     @Autowired
     private BlogPostRepository blogPostRepository;
+
+    @Autowired
+    private UserRepository userRepository;
 
 
     /**
@@ -34,6 +35,7 @@ public class BlogServiceImpl implements BlogService{
         }
         post.setCreationDate(new Date());
         post.setUpdatedDate(new Date());
+        post.setUser(userRepository.findByEmail(UserHelper.getUserEmail()).get());
         return blogPostRepository.save(post);
     }
 
@@ -80,4 +82,7 @@ public class BlogServiceImpl implements BlogService{
     public List<BlogPost> viewPost() {
         return blogPostRepository.findAll();
     }
+
+
+
 }

@@ -11,7 +11,7 @@ import java.util.Date;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table()
+@Table(name = "blog_post")
 public class BlogPost {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,5 +20,9 @@ public class BlogPost {
     private String body;
     private Date creationDate;
     private Date updatedDate;
+
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    private AppUser user;
 
 }
