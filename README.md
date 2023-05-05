@@ -22,5 +22,8 @@ Abc bLOG is a simple CRUD (Create, Read, Update, Delete) blog web application bu
 * Maven
 
 
+### The application will be available at http://localhost:8080.
+
+
 
 
