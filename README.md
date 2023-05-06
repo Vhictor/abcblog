@@ -23,6 +23,15 @@ Abc bLOG is a simple CRUD (Create, Read, Update, Delete) blog web application bu
 * Jwt
 
 
+## To build and run the project, follow these steps:
+
+* Clone the repository: git clone https://github.com/Vhictor/abcblog.git
+* Navigate to the project directory: cd abcblog
+* Add database "abcblog" to postgres
+* Build the project: mvn clean install
+* Run the project: mvn spring-boot:run
+
+
 ### The application will be available at http://localhost:8080.
 
 ### Postman documentation  : https://documenter.getpostman.com/view/19949796/2s93eX1t7j
