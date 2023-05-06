@@ -20,9 +20,12 @@ Abc bLOG is a simple CRUD (Create, Read, Update, Delete) blog web application bu
 * Hibernate
 * PosgresSQL
 * Maven
+* Jwt
 
 
 ### The application will be available at http://localhost:8080.
+
+### Postman documentation  : https://documenter.getpostman.com/view/19949796/2s93eX1t7j
 
 
 
