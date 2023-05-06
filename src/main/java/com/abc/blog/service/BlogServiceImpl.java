@@ -35,7 +35,7 @@ public class BlogServiceImpl implements BlogService{
         }
         post.setCreationDate(new Date());
         post.setUpdatedDate(new Date());
-        post.setUser(userRepository.findByEmail(UserHelper.getUserEmail()).get());
+      //  post.setUser(userRepository.findByEmail(UserHelper.getUserEmail()).get());
         return blogPostRepository.save(post);
     }
 

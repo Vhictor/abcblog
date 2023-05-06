@@ -17,12 +17,12 @@ public enum Role {
 
     USER(Collections.emptySet()),
 
-    ADMIN(
+    AUTHOR(
             Set.of(
-                    ADMIN_READ,
-                    ADMIN_UPDATE,
-                    ADMIN_DELETE,
-                    ADMIN_CREATE
+                    AUTHOR_READ,
+                    AUTHOR_UPDATE,
+                    AUTHOR_DELETE,
+                    AUTHOR_CREATE
             )
     );
 
